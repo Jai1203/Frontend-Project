@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Frontend Battle: Round 1</title>
+    <link rel="stylesheet" href="loader.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body onload="hideLoader()">
+    <!-- Loader -->
+    <div id="loader-wrapper">
+        <div class="loader">Loading...</div>
+    </div>
+<!-- Navbar -->
+    <nav class="navbar" role="navigation">
+        <div class="container">
+            <span class="logo">MyProject</span>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#customers">Customers</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#carousel">Carousel</a></li>
+                <li><a href="#showcase">Showcase</a></li>
+                <li><a href="#videos">Videos</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li>
+                    <button id="mode-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">🌙</button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+  <!-- Hero/Homepage with striking object and parallax -->
+    <header id="hero" class="hero">
+        <h1>Welcome to Frontend Battle</h1>
+        <p>Responsive • Light/Dark mode • Custom Loader</p>
+        <div class="striking-object">
+            <svg width="60" height="60" viewBox="0 0 60 60">
+                <circle cx="30" cy="30" r="25" fill="#0077cc" stroke="#fff" stroke-width="4">
+                    <animate attributeName="r" values="25;30;25" dur="1.5s" repeatCount="indefinite" />
+                </circle>
+            </svg>
+        </div>
+        <button id="open-modal" class="cta-btn">Learn More</button>
+    </header>
+ <!-- About -->
+    <section id="about" class="section">
+        <h2>About This Project</h2>
+        <p>This challenge demonstrates my ability to replicate & innovate a design using vanilla CSS and JavaScript.</p>
+    </section>
+
+    <!-- Features/Services -->
+    <section id="features" class="section">
+        <h2>Features & Services</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>Responsive Design</h3>
+                <p>Looks great on all devices.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Dark/Light Mode</h3>
+                <p>Switch themes instantly.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Custom Loader</h3>
+                <p>Modern animated loading screen.</p>
+            </div>
+        </div>
+    </section>
+    <section id="customers" class="section">
+        <h2>Our Customers</h2>
+        <div class="customer-logos">
+            <img src="assets/customer1.png" alt="Customer 1" />
+            <img src="assets/customer2.png" alt="Customer 2" />
+            <img src="assets/customer3.png" alt="Customer 3" />
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="section">
+        <h2>Testimonials</h2>
+        <div class="testimonials">
+            <blockquote>
+                <p>“This project exceeded my expectations!”</p>
+                <footer>- Alex, Product Manager</footer>
+            </blockquote>
+            <blockquote>
+                <p>“A fantastic showcase of frontend skills.”</p>
+                <footer>- Jamie, Designer</footer>
+            </blockquote>
+        </div>
+    </section>
+    <section id="stats" class="section stats-section">
+        <h2>Project Stats</h2>
+        <div class="stats-grid">
+            <div class="stat-card"><span class="stat-number">120+</span><span>Hours</span></div>
+            <div class="stat-card"><span class="stat-number">15</span><span>Features</span></div>
+            <div class="stat-card"><span class="stat-number">100%</span><span>Responsive</span></div>
+        </div>
+    </section>
+
+    <!-- Graph -->
+    <section id="graph" class="section">
+        <h2>Feature Usage Graph</h2>
+        <div class="bar-graph">
+            <div class="bar" style="height:80%"><span>Gallery</span></div>
+            <div class="bar" style="height:60%"><span>Videos</span></div>
+            <div class="bar" style="height:90%"><span>Contact</span></div>
+        </div>
+    </section>
+     <section id="gallery" class="section">
+        <h2>Gallery</h2>
+        <div class="gallery-grid">
+            <img src="assets/sample-image1.jpg" alt="Sample 1: Modern workspace" />
+            <img src="assets/sample-image2.jpg" alt="Sample 2: Creative design" />
+        </div>
+    </section>
+
+    <!-- Carousel -->
+    <section id="carousel" class="section">
+        <h2>Image Carousel</h2>
+        <div class="carousel">
+            <button class="carousel-btn" id="prev">&#8592;</button>
+            <img id="carousel-img" src="assets/sample-image1.jpg" alt="Carousel" />
+            <button class="carousel-btn" id="next">&#8594;</button>
+        </div>
+    </section>
+
+    <section id="showcase" class="section">
+        <h2>Showcase Work</h2>
+        <div class="showcase-grid">
+            <div class="showcase-card">
+                <img src="assets/sample-image1.jpg" alt="Project 1" />
+                <h3>Modern Workspace</h3>
+            </div>
+            <div class="showcase-card">
+                <img src="assets/sample-image2.jpg" alt="Project 2" />
+                <h3>Creative Design</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Videos -->
+    <section id="videos" class="section">
+        <h2>Videos</h2>
+        <video controls width="600" preload="metadata">
+            <source src="assets/sample-video.mp4" type="video/mp4" />
+            Your browser doesn’t support HTML5 video.
+        </video>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>Contact</h2>
+        <form class="contact-form" autocomplete="on">
+            <label for="name">Name:</label>
+            <input id="name" name="name" type="text" placeholder="Your Name" required />
+            <label for="email">Email:</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" required />
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span id="close-modal" class="close">&times;</span>
+            <h2>Welcome to Frontend Battle!</h2>
+            <p>This is a pop-up modal. Explore more features below.</p>
+        </div>
+    </div>
+    <footer class="footer">
+        <p>© 2025 Your Name — Built with Vanilla CSS & JS. AI Tools used: ChatGPT.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
